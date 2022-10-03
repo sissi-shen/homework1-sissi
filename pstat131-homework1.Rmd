@@ -1,8 +1,14 @@
 ---
 title: "pstat131-homework1"
-author: "Sissi Shen"
+author: "Sissi Shen, Jr"
 date: "2022-09-29"
 output: html_document
 ---
 
 Question 1:
+Supervised learning has four aspects: prediction, estimation, model selection, and inference. Using supervised machine learning, we can accurately predict future response given predictors and understand how predictors affect response. In terms of model selection, we can find the "best" model for response given predictors and assess the quality of our predictions and (or) estimation. In supervised learning, the actual data Y is the supervisor. We need to give the model observed output and input. The main difference between supervised and unsupervised learning is that unlike supervised learning, unsurpervised learning does not have the actual data output Y. It only has predictors but no response.
+
+Question 2:
+Regression and classification models all fall into the supervised machine learning category. In regression models, the output Y is quantitative and has numerical values as its result. In classification models, the output Y is qualitative and has categorical values as its result. 
+
+Question 3:
