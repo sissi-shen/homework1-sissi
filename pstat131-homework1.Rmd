@@ -12,3 +12,58 @@ Question 2:
 Regression and classification models all fall into the supervised machine learning category. In regression models, the output Y is quantitative and has numerical values as its result. In classification models, the output Y is qualitative and has categorical values as its result. 
 
 Question 3:
+Regression ML model usually uses mean squared error (MSE) and root mean squared error (RMSE) metrics. Classification ML model usually uses accuracy and confusion matrix metrics. 
+
+Question 4:
+Descriptive models choose models to best visually emphasize a trend in data, like using a line on the scatterplot. 
+Inferential models aim to test theories or causal claims and state relationship between outcomes and predictors. 
+Predictive models aim to predict Y with minimum reducible error, but they do not focus on hypothesis testing. 
+
+Question 5:
+(1) Mechanistic models assume a parametric form for f and can add parameters, but it won't match true unknown f. In contrast, empirically-driven models make no assumptions about f, and they require a larger number of observations. They are different in that mechanistic models use a theory or a formula to predict the real-world scenarios, but empirically driven models are built based on large number of real-world data. They are similar in terms of facing problems like overfitting. 
+(2) In general, I feel like mechanistic model is easier to understand because it is similar to a regression model, which I've already very familiar with. 
+(3) Bias-variance tradeoff is related to the use of both regression models. Bias is the difference between the prediction of our models and the correct values in real world. The higher the bias is, the lower the model complexity and the higher the prediction error will be. Variance is the flexibility of model prediction for a given data point. The higher the variance is, the higher the model complexity will be. High variance can have very little prediction error in training data, but high error in test data since it runs into the problem of overfitting. 
+
+Question 6:
+(1) The first question will be a predictive model, because we're interested in guessing a voter's voting outcome and her choice of candidates. We aim to predict the outcome with minimum reducible error. 
+(2) The second question will be an inferential model, because we're interested in understanding the relationship between having personal contact with candidates and the voters' voting outcomes. We aim to test a possible causal claim here. 
+
+
+Exercise 1:
+```{r}
+library(tidyverse)
+install.packages("ggplot2")
+library(ggplot2)
+```
+```{r}
+str(mpg)
+hist(mpg$hwy)
+```
+From the histogram, I can tell that cars that have 15-20 miles per gallon and 25-30 miles per gallon have higher frequencies. This means that many cars have their mpg around this interval. 
+
+Exercise 2:
+```{r}
+plot(mpg$hwy, mpg$cty, xlab = "Highway Miles per Gallon", ylab = "City Miles per Gallon")
+```
+Just from the scatter plot, I can tell that there is a positive correlation between highway miles per gallon and city miles per gallon. The higher the highway mpg is, usually the higher the city mpg will be, which makes the car more fuel efficient. 
+
+Exercise 3:
+```{r}
+ggplot(data=mpg, mapping = aes(y=manufacturer)) + geom_bar()
+```
+From the barplot, dodge makes the most cars. 
+
+Exercise 4:
+```{r}
+boxplot(hwy~cyl, data=mpg)
+```
+The number of cylinders is related to a car's highway miles per gallon. The more cylinders the car has, usually it has a lower mpg, which makes it less fuel efficient. 
+
+Exercise 5:
+```{r}
+install.packages("corrplot")
+library(corrplot)
+```
+```{r}
+head(mpg)
+```
