@@ -1,6 +1,6 @@
 ---
 title: "pstat131-homework1"
-author: "Sissi Shen, Jr"
+author: "Sissi Shen"
 date: "2022-09-29"
 output: html_document
 ---
