@@ -32,10 +32,7 @@ Question 6:
 Exercise 1:
 ```{r}
 library(tidyverse)
-install.packages("ggplot2")
 library(ggplot2)
-```
-```{r}
 str(mpg)
 hist(mpg$hwy)
 ```
@@ -61,7 +58,6 @@ The number of cylinders is related to a car's highway miles per gallon. The more
 
 Exercise 5:
 ```{r}
-install.packages("corrplot")
 library(corrplot)
 ```
 ```{r}
