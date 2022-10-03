@@ -66,4 +66,8 @@ library(corrplot)
 ```
 ```{r}
 head(mpg)
+M <- cor(mpg[, unlist(lapply(mpg, is.numeric))])
+corrplot(M, method = "ellipse", order="AOE", type="lower")
 ```
+From the correlation plot, I'm able to tell that cty is positively correlated with hwy (higher city mpg is correlated to higher highway mpg), cyl is negatively correlated with hwy and cty(more cylinders is correlated to less highway and city mpg), displ is negatively correlated with hwy and cty (higher liters is correlated with less highway and city mpg) but is positively correlated with cyl (a car with higher liters usually has more cylinders). Year does not have any correlation with any values discussed above. These relationships all make sense to me.
+
